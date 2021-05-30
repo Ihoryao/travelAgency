@@ -1,1 +1,10 @@
+ua\ihorChikh\travelAgency\model\Order.class
+ua\ihorChikh\travelAgency\dao\TourDao.class
+ua\ihorChikh\travelAgency\model\TourImage.class
+ua\ihorChikh\travelAgency\ConnectionPool.class
+ua\ihorChikh\travelAgency\dao\UserDAOImpl.class
+ua\ihorChikh\travelAgency\model\User.class
+ua\ihorChikh\travelAgency\dao\UserDAO.class
 ua\ihorChikh\travelAgency\HelloServlet.class
+ua\ihorChikh\travelAgency\dao\OrderDao.class
+ua\ihorChikh\travelAgency\model\Tour.class

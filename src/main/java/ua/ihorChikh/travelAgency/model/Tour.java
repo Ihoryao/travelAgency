@@ -12,6 +12,8 @@ public class Tour {
     private int discountMaxValue;
     private String description;
 
+
+
     public Tour(int id, String name, String type, int price, int persons, int hotelRate,
                 boolean hot, int discountStep, int discountMaxValue, String description) {
         this.id = id;

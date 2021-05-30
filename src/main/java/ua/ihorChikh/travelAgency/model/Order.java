@@ -1,6 +1,6 @@
 package ua.ihorChikh.travelAgency.model;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Order {
     private int id;
