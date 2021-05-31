@@ -840,12 +840,12 @@ false Zulu
 13158||-9223372036854775808|U|G
 13158||10|U|G</Grants>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>1342</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1366</IntrospectionStateNumber>
       <Current>1</Current>
-      <Relations>sequence|table|17884|17886|1
-sequence|table|17900|17902|1
-sequence|table|17921|17923|1
-sequence|table|17939|17941|1
+      <Relations>sequence|table|17974|17976|1
+sequence|table|17995|17997|1
+sequence|table|17958|17960|1
+sequence|table|18013|18015|1
 </Relations>
     </database>
     <role id="11" parent="1" name="pg_execute_server_program">
@@ -910,7 +910,7 @@ sequence|table|17939|17941|1
       <Comment>standard public schema</Comment>
       <StateNumber>287</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>1343</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1367</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <extension id="25" parent="10" name="plpgsql">
@@ -1011,33 +1011,33 @@ sequence|table|17939|17941|1
       <Type>index</Type>
     </access-method>
     <sequence id="37" parent="24" name="order_id_seq">
-      <ObjectId>17939</ObjectId>
+      <ObjectId>18013</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>1341</StateNumber>
+      <StateNumber>1365</StateNumber>
       <DataType>integer|0s</DataType>
     </sequence>
     <sequence id="38" parent="24" name="tour_id_seq">
-      <ObjectId>17884</ObjectId>
+      <ObjectId>17958</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>1336</StateNumber>
+      <StateNumber>1360</StateNumber>
       <DataType>integer|0s</DataType>
     </sequence>
     <sequence id="39" parent="24" name="tour_image_id_seq">
-      <ObjectId>17900</ObjectId>
+      <ObjectId>17974</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>1337</StateNumber>
+      <StateNumber>1361</StateNumber>
       <DataType>integer|0s</DataType>
     </sequence>
     <sequence id="40" parent="24" name="user_id_seq">
-      <ObjectId>17921</ObjectId>
+      <ObjectId>17995</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>1339</StateNumber>
+      <StateNumber>1363</StateNumber>
       <DataType>integer|0s</DataType>
     </sequence>
     <object-type id="41" parent="24" name="role_type">
-      <ObjectId>17914</ObjectId>
+      <ObjectId>17988</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>1338</StateNumber>
+      <StateNumber>1362</StateNumber>
       <SubKind>enum</SubKind>
       <Labels>user
 manager
@@ -1045,9 +1045,9 @@ admin</Labels>
       <SubCategory>enum</SubCategory>
     </object-type>
     <object-type id="42" parent="24" name="status_type">
-      <ObjectId>17932</ObjectId>
+      <ObjectId>18007</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>1340</StateNumber>
+      <StateNumber>1364</StateNumber>
       <SubKind>enum</SubKind>
       <Labels>registered
 paid
@@ -1055,30 +1055,30 @@ canceled</Labels>
       <SubCategory>enum</SubCategory>
     </object-type>
     <table id="43" parent="24" name="order">
-      <ObjectId>17941</ObjectId>
+      <ObjectId>18015</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>1341</StateNumber>
+      <StateNumber>1365</StateNumber>
     </table>
     <table id="44" parent="24" name="tour">
-      <ObjectId>17886</ObjectId>
+      <ObjectId>17960</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>1337</StateNumber>
+      <StateNumber>1361</StateNumber>
     </table>
     <table id="45" parent="24" name="tour_image">
-      <ObjectId>17902</ObjectId>
+      <ObjectId>17976</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>1337</StateNumber>
+      <StateNumber>1361</StateNumber>
     </table>
     <table id="46" parent="24" name="user">
-      <ObjectId>17923</ObjectId>
+      <ObjectId>17997</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>1341</StateNumber>
+      <StateNumber>1365</StateNumber>
     </table>
     <column id="47" parent="43" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1341</StateNumber>
+      <StateNumber>1365</StateNumber>
       <DefaultExpression>nextval(&apos;order_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
@@ -1086,39 +1086,39 @@ canceled</Labels>
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1341</StateNumber>
+      <StateNumber>1365</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="49" parent="43" name="tour_id">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1341</StateNumber>
+      <StateNumber>1365</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="50" parent="43" name="status">
       <Position>4</Position>
       <DataType>status_type|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1341</StateNumber>
+      <StateNumber>1365</StateNumber>
       <DefaultExpression>&apos;registered&apos;::status_type</DefaultExpression>
-      <TypeId>17932</TypeId>
+      <TypeId>18007</TypeId>
     </column>
     <column id="51" parent="43" name="registration_date">
       <Position>5</Position>
       <DataType>date|0s</DataType>
-      <StateNumber>1341</StateNumber>
+      <StateNumber>1365</StateNumber>
       <TypeId>1082</TypeId>
     </column>
     <column id="52" parent="43" name="payment_date">
       <Position>6</Position>
       <DataType>date|0s</DataType>
-      <StateNumber>1341</StateNumber>
+      <StateNumber>1365</StateNumber>
       <TypeId>1082</TypeId>
     </column>
     <index id="53" parent="43" name="order_pkey">
-      <ObjectId>17946</ObjectId>
-      <StateNumber>1341</StateNumber>
+      <ObjectId>18020</ObjectId>
+      <StateNumber>1365</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
@@ -1127,17 +1127,17 @@ canceled</Labels>
       <ClassIds>1978</ClassIds>
     </index>
     <key id="54" parent="43" name="order_pkey">
-      <ObjectId>17947</ObjectId>
-      <StateNumber>1341</StateNumber>
+      <ObjectId>18021</ObjectId>
+      <StateNumber>1365</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>order_pkey</UnderlyingIndexName>
     </key>
     <foreign-key id="55" parent="43" name="order_user_id_fkey">
-      <ObjectId>17948</ObjectId>
-      <StateNumber>1341</StateNumber>
+      <ObjectId>18022</ObjectId>
+      <StateNumber>1365</StateNumber>
       <ColNames>user_id</ColNames>
-      <RefTableId>17923</RefTableId>
+      <RefTableId>17997</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>user</RefTableName>
       <RefKeyName>user_pkey</RefKeyName>
@@ -1146,10 +1146,10 @@ canceled</Labels>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
     <foreign-key id="56" parent="43" name="order_tour_id_fkey">
-      <ObjectId>17953</ObjectId>
-      <StateNumber>1341</StateNumber>
+      <ObjectId>18027</ObjectId>
+      <StateNumber>1365</StateNumber>
       <ColNames>tour_id</ColNames>
-      <RefTableId>17886</RefTableId>
+      <RefTableId>17960</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>tour</RefTableName>
       <RefKeyName>tour_pkey</RefKeyName>
@@ -1161,7 +1161,7 @@ canceled</Labels>
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1336</StateNumber>
+      <StateNumber>1360</StateNumber>
       <DefaultExpression>nextval(&apos;tour_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
@@ -1169,62 +1169,62 @@ canceled</Labels>
       <Position>2</Position>
       <DataType>varchar(40)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1336</StateNumber>
+      <StateNumber>1360</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="59" parent="44" name="type">
       <Position>3</Position>
       <DataType>varchar(40)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1336</StateNumber>
+      <StateNumber>1360</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="60" parent="44" name="price">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1336</StateNumber>
+      <StateNumber>1360</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="61" parent="44" name="persons">
       <Position>5</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1336</StateNumber>
+      <StateNumber>1360</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="62" parent="44" name="hotel_rate">
       <Position>6</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1336</StateNumber>
+      <StateNumber>1360</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="63" parent="44" name="hot">
       <Position>7</Position>
       <DataType>boolean|0s</DataType>
-      <StateNumber>1336</StateNumber>
+      <StateNumber>1360</StateNumber>
       <DefaultExpression>false</DefaultExpression>
       <TypeId>16</TypeId>
     </column>
     <column id="64" parent="44" name="discount_step">
       <Position>8</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>1336</StateNumber>
+      <StateNumber>1360</StateNumber>
       <DefaultExpression>5</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
     <column id="65" parent="44" name="discount_max_value">
       <Position>9</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>1336</StateNumber>
+      <StateNumber>1360</StateNumber>
       <DefaultExpression>20</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
     <column id="66" parent="44" name="description">
       <Position>10</Position>
       <DataType>text|0s</DataType>
-      <StateNumber>1336</StateNumber>
+      <StateNumber>1360</StateNumber>
       <DefaultExpression>&apos;Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil fuga voluptatum, hic sequi excepturi vero&#xd;
                 harum dignissimos eveniet itaque optio dicta ipsa impedit sint aliquid. Corporis praesentium omnis&#xd;
                 perspiciatis ad! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo labore quae deserunt&#xd;
@@ -1240,8 +1240,8 @@ canceled</Labels>
       <TypeId>25</TypeId>
     </column>
     <index id="67" parent="44" name="tour_pkey">
-      <ObjectId>17898</ObjectId>
-      <StateNumber>1336</StateNumber>
+      <ObjectId>17972</ObjectId>
+      <StateNumber>1360</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
@@ -1250,15 +1250,15 @@ canceled</Labels>
       <ClassIds>1978</ClassIds>
     </index>
     <key id="68" parent="44" name="tour_pkey">
-      <ObjectId>17899</ObjectId>
-      <StateNumber>1336</StateNumber>
+      <ObjectId>17973</ObjectId>
+      <StateNumber>1360</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>tour_pkey</UnderlyingIndexName>
     </key>
     <check id="69" parent="44" name="tour_hotel_rate_check">
-      <ObjectId>17894</ObjectId>
-      <StateNumber>1336</StateNumber>
+      <ObjectId>17968</ObjectId>
+      <StateNumber>1360</StateNumber>
       <ColNames>hotel_rate</ColNames>
       <Predicate>(hotel_rate &gt; 0) AND (hotel_rate &lt; 6)</Predicate>
     </check>
@@ -1266,7 +1266,7 @@ canceled</Labels>
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1337</StateNumber>
+      <StateNumber>1361</StateNumber>
       <DefaultExpression>nextval(&apos;tour_image_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
@@ -1274,19 +1274,19 @@ canceled</Labels>
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1337</StateNumber>
+      <StateNumber>1361</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="72" parent="45" name="imageurl">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1337</StateNumber>
+      <StateNumber>1361</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <index id="73" parent="45" name="tour_image_pkey">
-      <ObjectId>17906</ObjectId>
-      <StateNumber>1337</StateNumber>
+      <ObjectId>17980</ObjectId>
+      <StateNumber>1361</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
@@ -1295,17 +1295,17 @@ canceled</Labels>
       <ClassIds>1978</ClassIds>
     </index>
     <key id="74" parent="45" name="tour_image_pkey">
-      <ObjectId>17907</ObjectId>
-      <StateNumber>1337</StateNumber>
+      <ObjectId>17981</ObjectId>
+      <StateNumber>1361</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>tour_image_pkey</UnderlyingIndexName>
     </key>
     <foreign-key id="75" parent="45" name="tour_image_tour_id_fkey">
-      <ObjectId>17908</ObjectId>
-      <StateNumber>1337</StateNumber>
+      <ObjectId>17982</ObjectId>
+      <StateNumber>1361</StateNumber>
       <ColNames>tour_id</ColNames>
-      <RefTableId>17886</RefTableId>
+      <RefTableId>17960</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>tour</RefTableName>
       <RefKeyName>tour_pkey</RefKeyName>
@@ -1317,7 +1317,7 @@ canceled</Labels>
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1339</StateNumber>
+      <StateNumber>1363</StateNumber>
       <DefaultExpression>nextval(&apos;user_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
@@ -1325,52 +1325,53 @@ canceled</Labels>
       <Position>2</Position>
       <DataType>role_type|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1339</StateNumber>
-      <TypeId>17914</TypeId>
+      <StateNumber>1363</StateNumber>
+      <DefaultExpression>&apos;user&apos;::role_type</DefaultExpression>
+      <TypeId>17988</TypeId>
     </column>
     <column id="78" parent="46" name="first_name">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
-      <StateNumber>1339</StateNumber>
+      <StateNumber>1363</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="79" parent="46" name="last_name">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
-      <StateNumber>1339</StateNumber>
+      <StateNumber>1363</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="80" parent="46" name="email">
       <Position>5</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1339</StateNumber>
+      <StateNumber>1363</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="81" parent="46" name="password">
       <Position>6</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>1339</StateNumber>
+      <StateNumber>1363</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="82" parent="46" name="discount">
       <Position>7</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>1339</StateNumber>
+      <StateNumber>1363</StateNumber>
       <DefaultExpression>0</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
     <column id="83" parent="46" name="blocked">
       <Position>8</Position>
       <DataType>boolean|0s</DataType>
-      <StateNumber>1339</StateNumber>
+      <StateNumber>1363</StateNumber>
       <DefaultExpression>false</DefaultExpression>
       <TypeId>16</TypeId>
     </column>
     <index id="84" parent="46" name="user_pkey">
-      <ObjectId>17929</ObjectId>
-      <StateNumber>1339</StateNumber>
+      <ObjectId>18004</ObjectId>
+      <StateNumber>1363</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
@@ -1379,8 +1380,8 @@ canceled</Labels>
       <ClassIds>1978</ClassIds>
     </index>
     <key id="85" parent="46" name="user_pkey">
-      <ObjectId>17930</ObjectId>
-      <StateNumber>1339</StateNumber>
+      <ObjectId>18005</ObjectId>
+      <StateNumber>1363</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>user_pkey</UnderlyingIndexName>

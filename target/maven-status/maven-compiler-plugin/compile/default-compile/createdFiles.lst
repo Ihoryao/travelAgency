@@ -1,6 +1,8 @@
 ua\ihorChikh\travelAgency\dao\TourImageDAOImpl.class
 ua\ihorChikh\travelAgency\controller\TourServlet.class
+ua\ihorChikh\travelAgency\controller\RegisterServlet.class
 ua\ihorChikh\travelAgency\model\TourImage.class
+ua\ihorChikh\travelAgency\dao\userDao\UserDAO.class
 ua\ihorChikh\travelAgency\dao\UserDAO.class
 ua\ihorChikh\travelAgency\dao\TourDAOImpl.class
 ua\ihorChikh\travelAgency\HelloServlet.class
@@ -8,5 +10,6 @@ ua\ihorChikh\travelAgency\model\Order.class
 ua\ihorChikh\travelAgency\ConnectionPool.class
 ua\ihorChikh\travelAgency\dao\UserDAOImpl.class
 ua\ihorChikh\travelAgency\dao\OrderDAOImpl.class
+ua\ihorChikh\travelAgency\controller\LoginServlet.class
 ua\ihorChikh\travelAgency\model\User.class
 ua\ihorChikh\travelAgency\model\Tour.class

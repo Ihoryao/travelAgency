@@ -41,15 +41,15 @@ create type role_type as enum ('user', 'manager', 'admin');
 
 create table "user"
 (
-    id         serial primary key not null,
+    id         serial primary key       not null,
 --     role_id    int references role (id) on delete cascade on update cascade not null,
-    role       role_type          not null,
+    role       role_type default 'user' not null,
     first_name varchar(50),
     last_name  varchar(50),
-    email      varchar(50)        not null,
-    password   varchar(255)       not null,
-    discount   int  default 0,
-    blocked    bool default false
+    email      varchar(50)              not null,
+    password   varchar(255)             not null,
+    discount   int       default 0,
+    blocked    bool      default false
 );
 
 create type "status_type" as enum ('registered', 'paid', 'canceled');
