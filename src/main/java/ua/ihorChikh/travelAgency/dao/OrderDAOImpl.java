@@ -35,16 +35,17 @@ public class OrderDAOImpl {
                 "where id = ?";
         Order order = null;
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(query);
-             ResultSet resultSet = preparedStatement.executeQuery()) {
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setInt(1, id);
-            while (resultSet.next()) {
-                order = new Order(resultSet.getInt("id"),
-                        resultSet.getInt("user_id"),
-                        resultSet.getInt("tour_id"),
-                        resultSet.getString("status"),
-                        resultSet.getDate("registration_date"),
-                        resultSet.getDate("payment_date"));
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                while (resultSet.next()) {
+                    order = new Order(resultSet.getInt("id"),
+                            resultSet.getInt("user_id"),
+                            resultSet.getInt("tour_id"),
+                            resultSet.getString("status"),
+                            resultSet.getDate("registration_date"),
+                            resultSet.getDate("payment_date"));
+                }
             }
         } catch (SQLException e) {
             System.err.println(e);

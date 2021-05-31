@@ -40,18 +40,19 @@ public class UserDAOImpl implements UserDAO {
                 "where id = ?";
         User user = null;
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(query);
-             ResultSet resultSet = preparedStatement.executeQuery()) {
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setInt(1, id);
-            while (resultSet.next()) {
-                user = new User(resultSet.getInt("id"),
-                        resultSet.getString("role"),
-                        resultSet.getString("first_name"),
-                        resultSet.getString("last_name"),
-                        resultSet.getString("email"),
-                        resultSet.getString("password"),
-                        resultSet.getInt("discount"),
-                        resultSet.getBoolean("blocked"));
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                while (resultSet.next()) {
+                    user = new User(resultSet.getInt("id"),
+                            resultSet.getString("role"),
+                            resultSet.getString("first_name"),
+                            resultSet.getString("last_name"),
+                            resultSet.getString("email"),
+                            resultSet.getString("password"),
+                            resultSet.getInt("discount"),
+                            resultSet.getBoolean("blocked"));
+                }
             }
         } catch (SQLException e) {
             System.err.println(e);

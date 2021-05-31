@@ -18,9 +18,11 @@ public class HelloServlet extends HttpServlet {
         UserDAO userDAO = new UserDAOImpl();
         PrintWriter out = response.getWriter();
 
-        User user = userDAO.findUserById(1);
+       // User user = userDAO.findUserById(1);
         out.println("<html><body>");
-        out.println("<p>" + user + "</p>");
+        out.println("<p>" + userDAO.findAllUsers() + "</p>");
+        out.println("<br><br>");
+        out.println("<p>" + userDAO.findUserById(2) + "</p>");
         out.println("</body></html>");
     }
 }

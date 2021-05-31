@@ -40,20 +40,21 @@ public class TourDAOImpl {
                 "where id = ?";
         Tour tour = null;
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(query);
-             ResultSet resultSet = preparedStatement.executeQuery()) {
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setInt(1, id);
-            while (resultSet.next()) {
-                tour = new Tour(resultSet.getInt("id"),
-                        resultSet.getString("name"),
-                        resultSet.getString("type"),
-                        resultSet.getInt("price"),
-                        resultSet.getInt("persons"),
-                        resultSet.getInt("hotel_rate"),
-                        resultSet.getBoolean("hot"),
-                        resultSet.getInt("discountStep"),
-                        resultSet.getInt("discountMaxValue"),
-                        resultSet.getString("description"));
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                while (resultSet.next()) {
+                    tour = new Tour(resultSet.getInt("id"),
+                            resultSet.getString("name"),
+                            resultSet.getString("type"),
+                            resultSet.getInt("price"),
+                            resultSet.getInt("persons"),
+                            resultSet.getInt("hotel_rate"),
+                            resultSet.getBoolean("hot"),
+                            resultSet.getInt("discountStep"),
+                            resultSet.getInt("discountMaxValue"),
+                            resultSet.getString("description"));
+                }
             }
         } catch (SQLException e) {
             System.err.println(e);

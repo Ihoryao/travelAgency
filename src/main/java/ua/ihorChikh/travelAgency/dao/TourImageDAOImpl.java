@@ -32,13 +32,14 @@ public class TourImageDAOImpl {
                 "where id = ?";
         TourImage tourImage = null;
         try (Connection connection = ConnectionPool.getInstance().getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(query);
-             ResultSet resultSet = preparedStatement.executeQuery()) {
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setInt(1, id);
-            while (resultSet.next()) {
-                tourImage = new TourImage(resultSet.getInt("id"),
-                        resultSet.getInt("tour_id"),
-                        resultSet.getString("imageurl"));
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                while (resultSet.next()) {
+                    tourImage = new TourImage(resultSet.getInt("id"),
+                            resultSet.getInt("tour_id"),
+                            resultSet.getString("imageurl"));
+                }
             }
         } catch (SQLException e) {
             System.err.println(e);
